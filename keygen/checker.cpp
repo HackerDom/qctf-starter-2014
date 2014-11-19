@@ -22,52 +22,38 @@ const int teamCount = 3;
 const int bufferSize = 100;
 char buffer[100];
 
-inline char hex(const char ch) {
-	if ('0' <= ch && ch <= '9')
-		return ch - '0';
-	if ('A' <= ch && ch <= 'F')
-		return ch - 'A';
-	return -1;
+bool isHex(const char buf[]) {
+	for (size_t i = 0; buf[i]; ++i)
+		if (!(('0' <= buf[i] && buf[i] <= '9') || ('a' <= buf[i] && buf[i] <= 'f')))
+			return false;
+	return true;
 }
 
-inline ull ror(ull x, ull k) {
+ull ror(ull x, ull k) {
 	int kk = k & 63;
 	return (x << kk) | (x >> (64 - kk));
 }
 
-inline ull mul(ull a, ull b) {
+ull mul(ull a, ull b) {
 	ull res = 0;
 	while (b) {
 		if (b & 1)
-			res += a;
-		a <<= 1;
+			res = (res + a) % prime;
+		a = (a + a) % prime;
 		b >>= 1;
 	}
 	return res;
 }
 
-inline bool correct(const char team[], const char buf[]) {
-	if (strlen(buf) != 24 * 2 + 7)
+bool correct(const char team[], const char buf[]) {
+	if (strlen(buf) != 24 * 2)
+		return false;
+
+	if (!isHex(buf))
 		return false;
 
 	ull A, B, C;
-	A = B = C = 0;
-	for (size_t i = 0; buf[i]; ++i) {
-		if (buf[i] == '-') {
-			if (i % 7 == 6)
-				continue;
-			return false;
-		}
-		char q = hex(buf[i]);
-		if (q < 0)
-			return false;
-		A <<= 4;
-		A |= (B & 0xf000000000000000ULL) >> 60;
-		B <<= 4;
-		B |= (C & 0xf000000000000000ULL) >> 60;
-		C <<= 4;
-		C |= q;
-	}
+	sscanf(buf, "%16llX%16llX%16llX", &A, &B, &C);
 
 	for (size_t i = 0; i < 10; ++i) {
 		ull a, b, c;
@@ -79,18 +65,12 @@ inline bool correct(const char team[], const char buf[]) {
 		A = a; B = b; C = c;
 	}
 
-	ull AA, BB, CC;
-	AA = BB = CC = 0;
-	for (size_t i = 0; team[i]; ++i) {
-		AA <<= 8;
-		AA |= (BB & 0xff00000000000000ULL) >> 56;
-		BB <<= 8;
-		BB |= (CC & 0xff00000000000000ULL) >> 56;
-		CC <<= 8;
-		CC |= static_cast<unsigned char>(team[i]);
-	}
+	char temp[25];
+	memset(temp, 0, 25);
+	memcpy(temp, team, strlen(team));
+	ull * longTeam = (ull*)temp;
 
-	return A == AA && B == BB && C == CC;
+	return A == longTeam[0] && B == longTeam[1] && C == longTeam[2];
 }
 
 int main(int argc, char *argv[]) {
