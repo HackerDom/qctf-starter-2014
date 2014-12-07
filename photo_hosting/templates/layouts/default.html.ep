@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ФотоХостинг</title>
+	<link rel="stylesheet" href="http://bootswatch.com/united/bootstrap.min.css">
+	<link rel="stylesheet" href="/other/style.css">
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<%= content %>
+
+</body>
+</html>

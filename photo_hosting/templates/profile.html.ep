@@ -1,0 +1,111 @@
+% layout 'default';
+
+% my @albums = @{ $self->stash('albums') };
+% my $login = $self->session('login');
+% my $index = $self->stash('index');
+% my $uploadError = $self->flash('uploadError');
+% my $addAlbumError = $self->flash('addAlbumError');
+
+<div class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<a href="/" class="navbar-brand"><img src="/other/logo.png">ФотоХостинг</a>
+		</div>
+		<div class="navbar-collapse collapse navbar-responsive-collapse">
+			<ul class="nav navbar-nav navbar-right"><li><a href="<%= url_for('userLogout') %>">Выход</a></li></ul>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-4">
+			<div class="well bs-component">
+				<form method="POST" action="<%= url_for('addAlbum') %>">
+					<legend>Добавить альбом</legend>
+					% if ($addAlbumError) {
+					<div class="alert alert-danger" role="alert"><%= $addAlbumError %></div>
+					% }
+					<div class="form-group">
+						<label class="ccontrol-label">Название</label>
+						<input type="text" class="form-control" name="name">
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary">Добавить</button>
+					</div>
+				</form>
+			</div>
+			% if (@albums) {
+			<div class="well bs-component">
+				<legend>Мои альбомы</legend>
+				<ul class="nav nav-pills nav-stacked">
+					% my $i = 0;
+					% for my $album (@albums) {
+					% if ((defined $index) && ($i == $index)) {
+					<li class="active"><a href="<%= url_for('viewAlbum', index => $i++) %>"><%= $album->{name} %></a></li>
+					% } else {
+					<li><a href="<%= url_for('viewAlbum', index => $i++) %>"><%= $album->{name} %></a></li>
+					% }
+					% }
+				</ul>
+			</div>
+			% }
+		</div>
+		% if (defined $index) {
+		% my $album = $albums[$index];
+		<div class="col-lg-8">
+			<div class="well bs-component">
+				<form method="POST" enctype="multipart/form-data" action="<%= url_for('addImage', index => $index) %>">
+					<legend>Загрузить изображение</legend>
+					% if ($uploadError) {
+					<div class="alert alert-danger" role="alert"><%= $uploadError %></div>
+					% }
+					<div class="btn-group">
+						<span class="btn btn-default btn-file">
+							<span id="filename">Обзор...</span>
+							<input type="file" name="image">
+						</span>
+						<button type="submit" class="btn btn-primary">Загрузить</button>
+					</div>
+				</form>
+			</div>
+			<div class="row">
+				% for my $image (@{ $album->{images} }) {
+				<div class="col-xs-6 col-md-4 image">
+					<a href="#" class="thumbnail">
+						<span class="image-description"><%= $image->{comment} %></span>
+						<span class="image-img"><img src="<%= '/images/' . $image->{name} . '.jpg' %>"></span>
+					</a>
+				</div>
+				% }
+			</div>
+			<div class="well info">
+				Поделитесь альбомом со своими друзьями с
+				помощью <b><a target="_blank" href="<%= url_for('publicViewAlbum', id => $album->{id}) %>">этой</a></b>
+				ссылки!
+			</div>
+		</div>
+		% }
+	</div>
+</div>
+<!-- Просмотр изображения -->
+<div id="imageZoom"><img></div>
+<!-- JS -->
+<script>
+	var $zoom = $('#imageZoom');
+	var $img = $zoom.find("img");
+	$(".image").click(function(){
+		var url = $(this).find('img').attr('src');
+		$img.attr("src", url);
+		$zoom.fadeIn(200);
+		return false;
+	});
+	$zoom.click(function() {
+		$zoom.fadeOut(200);
+	});
+	var $filename = $('#filename');
+	$(document).on('change', '.btn-file :file', function() {
+		var $this = $(this);
+		var filename = $this.val().replace(/\\/g, '/').replace(/.*\//, '') || 'Обзор...';
+		$filename.text(filename);
+	});
+</script>
