@@ -22,6 +22,10 @@ const int teamCount = 3;
 const int bufferSize = 100;
 char buffer[100];
 
+int min(int a, int b) {
+	return a < b ? a : b;
+}
+
 bool isHex(const char buf[]) {
 	for (size_t i = 0; buf[i]; ++i)
 		if (!(('0' <= buf[i] && buf[i] <= '9') || ('a' <= buf[i] && buf[i] <= 'f')))
@@ -67,7 +71,7 @@ bool correct(const char team[], const char buf[]) {
 
 	char temp[25];
 	memset(temp, 0, 25);
-	memcpy(temp, team, strlen(team));
+	memcpy(temp, team, min(strlen(team), 24));
 	ull * longTeam = (ull*)temp;
 
 	return A == longTeam[0] && B == longTeam[1] && C == longTeam[2];
