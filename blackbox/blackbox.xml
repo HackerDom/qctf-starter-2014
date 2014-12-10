@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quest series="Esrom" id="Esrom:100" proto="xmlquest-1.0">
+    <name>Езром</name>
+    <task type="html"><p>У нас завёлся сфинкс в чёрном ящике. И ключ он отдаёт только тем, кто сможет 10 раз подряд верно ответить на его вопросы. Если хотите попробовать, вам сюда: nc blackbox.qctf.ru 61000 <!-- NB. поправить адрес и порт --> </p></task>
+    <checker strict="yes">
+        <solution case="insensitive">QCTF_27a9d80b2585494095480647d3062ee3</solution>
+    </checker>
+</quest>
