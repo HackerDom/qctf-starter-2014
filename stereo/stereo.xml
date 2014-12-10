@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quest series="stereo" id="stereo:100" proto="xmlquest-1.0">
+    <name>Езром</name>
+    <task type="html"><p>Присмотритесь, и вы тоже сможете найти <a href="static/9473e3e8e2ed3ed5872f3c9388ea45cc674bef52/dragon.jpg">дракона</a>.</p></task>
+    <checker strict="yes">
+        <solution case="insensitive">QCTF_d528b49f08ba314c</solution>
+    </checker>
+</quest>
