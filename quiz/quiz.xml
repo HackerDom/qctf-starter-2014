@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<quest series="Quiz" id="Quiz:100" proto="xmlquest-1.0">
+<quest series="Quiz" id="Quiz:50" proto="xmlquest-1.0">
     <name>Quiz</name>
     <task type="html"><h1>Инструкция по выполнению задания</h1>1. Вашей команде необходимо подключиться к IRC каналу <b>#qctf_quiz</b> на сервере <b>irc.hackerdom.ru</b>. Если вы не знаете, как это сделать, воспользуйтесь нашей небольшой инструкцией. Вы можете это сделать с помощью любого IRC-клиента. В качестве примера давайте рассмотрим подключение через онлайн IRC-клиент <b>Kiwi IRC</b>:
 Необходимо открыть в браузере URL адрес: <a href="https://kiwiirc.com/client">https://kiwiirc.com/client</a><br/>
