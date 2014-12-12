@@ -4,8 +4,6 @@
 
 typedef unsigned long long ull;
 
-const ull prime = 567460752303432487ULL;
-
 const char series[] = "keygen";
 const char score[] = "200";
 const char name[] = "Qoala";
@@ -28,25 +26,15 @@ int min(int a, int b) {
 
 bool isHex(const char buf[]) {
 	for (size_t i = 0; buf[i]; ++i)
-		if (!(('0' <= buf[i] && buf[i] <= '9') || ('a' <= buf[i] && buf[i] <= 'f')))
+		if (!(('0' <= buf[i] && buf[i] <= '9') || ('A' <= buf[i] && buf[i] <= 'F')))
 			return false;
 	return true;
 }
 
 ull ror(ull x, ull k) {
 	int kk = k & 63;
-	return (x << kk) | (x >> (64 - kk));
-}
-
-ull mul(ull a, ull b) {
-	ull res = 0;
-	while (b) {
-		if (b & 1)
-			res = (res + a) % prime;
-		a = (a + a) % prime;
-		b >>= 1;
-	}
-	return res;
+	int k2 = 64 - kk;
+	return (x << kk) | ((x >> k2) & ((1ULL << kk) - 1));
 }
 
 bool correct(const char team[], const char buf[]) {
@@ -55,18 +43,14 @@ bool correct(const char team[], const char buf[]) {
 
 	if (!isHex(buf))
 		return false;
-
+	
 	ull A, B, C;
 	sscanf(buf, "%16llX%16llX%16llX", &A, &B, &C);
 
 	for (size_t i = 0; i < 10; ++i) {
-		ull a, b, c;
-
-		a = (A + B) ^ C;
-		b = ror(B, C) ^ A;
-		c = mul(A, C) + B;
-
-		A = a; B = b; C = c;
+		A = (A + B) ^ C;
+		B = ror(B, C) ^ A;
+		C = ror(C, A) + B;
 	}
 
 	char temp[25];
@@ -75,6 +59,12 @@ bool correct(const char team[], const char buf[]) {
 	ull * longTeam = (ull*)temp;
 
 	return A == longTeam[0] && B == longTeam[1] && C == longTeam[2];
+}
+
+void trimEnd(char* buf) {
+	int last = strlen(buf) - 1;
+	while (last >= 0 && buf[last] == '\n')
+		buf[last--] = 0;
 }
 
 int main(int argc, char *argv[]) {
@@ -124,6 +114,8 @@ int main(int argc, char *argv[]) {
 			fputs("Reading fail...\n", stderr);
 			return 1;
 		}
+
+		trimEnd(buffer);
 
 		return 2 * !correct(teams[atoi(argv[3])], buffer);
 	}
