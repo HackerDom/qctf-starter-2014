@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quest series="Xor" id="Xor:100" proto="xmlquest-1.0">
+    <name>Xor</name>
+    <task type="html"><p>А этот <a href="/static/86c2ce2ed3f074989638e3e6652b88ee4ab263fd/xor.png">файл</a> мы просто поксорили с ключом длины 45.</p></task>
+    <checker strict="yes">
+        <solution case="insensitive">...</solution>
+    </checker>
+</quest>
