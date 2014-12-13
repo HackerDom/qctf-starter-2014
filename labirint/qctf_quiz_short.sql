@@ -23,20 +23,20 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `qctf_quiz_short`
+-- Структура таблицы `qctf_quiz`
 --
 
-CREATE TABLE IF NOT EXISTS `qctf_quiz_short` (
+CREATE TABLE IF NOT EXISTS `qctf_quiz` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `data` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=102 ;
 
 --
--- Дамп данных таблицы `qctf_quiz_short`
+-- Дамп данных таблицы `qctf_quiz`
 --
 
-INSERT INTO `qctf_quiz_short` (`id`, `data`) VALUES
+INSERT INTO `qctf_quiz` (`id`, `data`) VALUES
 (1, '{"Answer": 1, "Answers_List": ["Sex & Drugs & Rock & Roll", "42", "Пушкин", "Да"], "Question": "Ответ на главный вопрос жизни, вселенной и всего такого?"}'),
 (2, '{"Answer": 3, "Answers_List": ["bo", "bu", "bh", "bt"], "Question": "Национальный домен Бутана обозначается этими двумя буквами."}'),
 (3, '{"Answer": 1, "Answers_List": ["''Ben'' и ''Music & Me''", "''Thriller'' и ''Bad''", "''Off the Wall'' и ''Invincible''", "''Dangerous'' и ''HIStory''"], "Question": "Какие два альбома Майкла Джексона, ставшие одними из самых продаваемых в истории музыки, вышли в 80-е годы ?"}'),
