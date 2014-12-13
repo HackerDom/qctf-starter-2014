@@ -7,10 +7,10 @@
     } else {
         $id = $_SESSION['step'];
     }
-    $retval_cat = mysql_query("SELECT COUNT(*) FROM `qctf_quiz`", $conn) or die('Could not get data: ' . mysql_error());
+    $retval_cat = mysql_query("SELECT COUNT(*) FROM `qctf_quiz_short`", $conn) or die('Could not get data: ' . mysql_error());
     $row_cat = mysql_fetch_array($retval_cat, MYSQL_ASSOC);
     $questions_num = $row_cat['COUNT(*)'] - 1;
-    $retval_cat = mysql_query("SELECT `data` FROM `qctf_quiz` WHERE `id`={$id}", $conn) or die('Could not get data: ' . mysql_error());
+    $retval_cat = mysql_query("SELECT `data` FROM `qctf_quiz_short` WHERE `id`={$id}", $conn) or die('Could not get data: ' . mysql_error());
     $row_cat = mysql_fetch_array($retval_cat, MYSQL_ASSOC);
     $list = json_decode($row_cat['data']);
     $answer = $list->{'Answer'};
@@ -23,7 +23,7 @@
             $_SESSION['step'] = 1;
             $id = 1; 
         }
-        $retval_cat = mysql_query("SELECT `data` FROM `qctf_quiz` WHERE `id`={$id}", $conn) or die('Could not get data: ' . mysql_error());
+        $retval_cat = mysql_query("SELECT `data` FROM `qctf_quiz_short` WHERE `id`={$id}", $conn) or die('Could not get data: ' . mysql_error());
         $row_cat = mysql_fetch_array($retval_cat, MYSQL_ASSOC);
         $list = json_decode($row_cat['data']);
     }
