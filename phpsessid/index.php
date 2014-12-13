@@ -8,7 +8,7 @@
 	}
 	set_error_handler('error_handler');
 
-	$session = unserialize($_COOKIE['PHPSESSID']);
+	$session = unserialize($_COOKIE['session']);
 
 	$username = $session['username'];
 	if ($username === 'admin') {

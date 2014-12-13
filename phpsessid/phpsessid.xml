@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quest series="phpsessid" id="phpsessid:100" proto="xmlquest-1.0">
+    <name>Cookie</name>
+    <task type="html"><p>У нас тут какие-то странные ошибки... Сможете их исправить?</p></task>
+    <checker strict="yes">
+        <solution case="insensitive">QCTF_c31834fa3524fa44</solution>
+    </checker>
+</quest>
