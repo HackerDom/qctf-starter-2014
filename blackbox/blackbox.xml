@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <quest series="Blackbox" id="Blackbox:100" proto="xmlquest-1.0">
     <name>Чёрный ящик</name>
-    <task type="html"><p>У нас завёлся сфинкс в чёрном ящике. И ключ он отдаёт только тем, кто сможет 10 раз подряд верно ответить на его вопросы.</p> <p>Если хотите попробовать, вам сюда: <b>nc blackbox.qctf.ru 61000 <!-- NB. поправить адрес и порт --></b> </p></task>
+    <task type="html"><p>У нас завёлся сфинкс в чёрном ящике. И ключ он отдаёт только тем, кто сможет 10 раз подряд верно ответить на его вопросы.</p> <p>Если хотите попробовать, вам сюда: <b>nc blackbox.qctf.ru 60000</b> </p></task>
     <checker strict="yes">
         <solution case="insensitive">QCTF_27a9d80b2585494095480647d3062ee3</solution>
     </checker>
