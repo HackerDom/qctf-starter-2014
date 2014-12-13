@@ -41,7 +41,7 @@
         <link type="text/css" rel="stylesheet" media="all" href="style/style.css" />
         <link type="text/css" rel="stylesheet" media="all" href="/elective/style/animate.min.css" />
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="/elective/scripts/wow.min.js"></script>
+        <script src="//juicy-media.ru/elective/scripts/wow.min.js"></script>
         <script>
             new WOW().init();
         </script>
