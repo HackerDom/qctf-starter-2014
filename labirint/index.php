@@ -39,7 +39,7 @@
   <head>
         <meta charset="utf-8" />
         <link type="text/css" rel="stylesheet" media="all" href="style/style.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="/elective/style/animate.min.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="//juicy-media.ru/elective/style/animate.min.css" />
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="//juicy-media.ru/elective/scripts/wow.min.js"></script>
         <script>
