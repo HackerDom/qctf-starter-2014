@@ -127,7 +127,7 @@ int main(int argc, char *argv[]) {
 			return 1;
 		}
 
-		printf("ID: %s\n", argv[3] - startTeamIndex);
+		printf("ID: %s\n", atoi(argv[3]) - startTeamIndex);
 		printf("html[ru]: %s\n", text);
 		return 0;
 	}
