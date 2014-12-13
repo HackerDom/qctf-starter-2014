@@ -10,7 +10,7 @@ my $settings = {
 	salt => pack('H*', 'aad28123bb4983bbb6749ee462cb0e10')
 };
 
-my $flag = '<Error! Access Deny!>';
+my $flag = '****************';
 
 $\ = $/;
 $|++;
