@@ -24,11 +24,8 @@ int main() {
 	ull C = longTeam[2];
 
 	for (size_t i = 0; i < 10; ++i) {
-		printf("c: %016llX%016llX%016llX\n", A, B, C);
 		C = rol(C - B, A);
-		printf("b: %016llX%016llX%016llX\n", A, B, C);
 		B = rol(B ^ A, C);
-		printf("a: %016llX%016llX%016llX\n", A, B, C);
 		A = (A ^ C) - B;
 	}
 

@@ -10,12 +10,45 @@ const char name[] = "Qoala";
 const char text[] = "Всё просто: вам нужно отослать строку, которую примет наш <a href='static/ec150796205b74e622e381c4fdb17fb4b701236b/checker'>чекер</a>";
 
 const char* teams[] = {
-	"team1",
-	"team2",
-	"team3"
+	"ronin",
+	"SnowNiggers",
+	"Temp",
+	"0xAEAE",
+	"Curiosity",
+	"orz",
+	"Destructive Voice",
+	"Temp2",
+	"}{0Tт@Бь)Ч",
+	"AV-Group",
+	"Lalochka",
+	"AC-Adapter",
+	"Hobbits",
+	"Counter-Logic",
+	"ISLookPieNice",
+	"StackOverflow",
+	"Hello_World!",
+	"obnovilsyabezproblem",
+	"marmeladka",
+	"Teddy",
+	"MicroBears",
+	"Eliot",
+	"Resolver'ы",
+	"ASMиноги",
+	"RussianBears",
+	"BobKnows",
+	"ADVE!nt",
+	"404",
+	"«     »",
+	"Dandelion",
+	"Байтики",
+	"SudoObey",
+	"Mix",
+	"Двоичный кот",
+	"Калинкольн-Малинкольн"
 };
 
-const int teamCount = 3;
+const int startTeamIndex = 24;
+const int teamCount = 35;
 
 const int bufferSize = 100;
 char buffer[100];
@@ -43,7 +76,7 @@ bool correct(const char team[], const char buf[]) {
 
 	if (!isHex(buf))
 		return false;
-	
+
 	ull A, B, C;
 	sscanf(buf, "%16llX%16llX%16llX", &A, &B, &C);
 
@@ -99,7 +132,7 @@ int main(int argc, char *argv[]) {
 			return 1;
 		}
 
-		printf("ID: %s\n", argv[3]);
+		printf("ID: %s\n", argv[3] - startTeamIndex);
 		printf("html[ru]: %s\n", text);
 		return 0;
 	}
