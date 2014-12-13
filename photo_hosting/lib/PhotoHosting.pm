@@ -6,6 +6,9 @@ use Mango;
 sub startup {
 	my $self = shift;
 
+	# Config
+	my $config = $self->app->plugin('JSONConfig' => {file => 'config.json'});
+
 	# Log level
 	$self->app->log->level('debug');
 
@@ -18,8 +21,8 @@ sub startup {
 
 	# Mongodb users
 	$self->helper(users => sub {
-		state $mango = Mango->new('mongodb://localhost:27017');
-		return $mango->db('test')->collection('users');
+		state $mango = Mango->new('mongodb://' . $config->{db}->{host} . ':' . $config->{db}->{port} );
+		return $mango->db($config->{db}->{name})->collection('users');
 	});
 
 	# Routes

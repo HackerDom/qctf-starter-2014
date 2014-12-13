@@ -1,0 +1,11 @@
+{
+  "hypnotoad" : {
+  	"listen" : ["http://127.0.0.1:8080"],
+  	"workers" : 4
+  },
+  "db" : {
+  	"host" : "127.0.0.1",
+  	"port" : 27017,
+  	"name" : "photo_hosting"
+  }
+}
