@@ -15,8 +15,8 @@
     $list = json_decode($row_cat['data']);
     $answer = $list->{'Answer'};
     $answers = $list->{'Answers_List'};
-    if (isset($_POST['answer'])) {
-        if ($_POST['answer'] == $answers[$answer]) {
+    if (isset($_GET['answer'])) {
+        if ($_GET['answer'] == $answers[$answer]) {
             $_SESSION['step']++;
             $id++;
         } else {
@@ -53,10 +53,10 @@
                 <?php
                     for ($i = 0; $i < count($answers); $i++) {
                         $val = htmlspecialchars($answers[$i]);
-                        echo "<div class=\"line\"><div class=\"mark\"><input type=\"radio\" name=\"answer\" value=\"{$val}\"></div><div class=\"title\"><label>{$answers[$i]}</label></div></div>";
+                        $val_uenc = urlencode($answers[$i]);
+                        echo "<a href=\"./index.php?answer={$val_uenc}\"><div class=\"line\"><div class=\"mark\"><input type=\"radio\" name=\"answer\" value=\"{$val}\"></div><div class=\"title\"><label>{$answers[$i]}</label></div></div></a>";
                     }
                 ?>
-                <div class="bottom"><input type="submit" value="Отправить"></div>
             </form>
         </div>
     </body>
