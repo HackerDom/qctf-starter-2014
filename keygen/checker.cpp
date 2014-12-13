@@ -44,11 +44,11 @@ const char* teams[] = {
 	"SudoObey",
 	"Mix",
 	"Двоичный кот",
-	"Калинкольн-Малинкольн"
+	"Калинкольн-Малинкольн",
+	"Камнеежка"
 };
 
 const int startTeamIndex = 24;
-const int teamCount = 35;
 
 const int bufferSize = 100;
 char buffer[100];
@@ -124,11 +124,6 @@ int main(int argc, char *argv[]) {
 	if (!strcmp(argv[1], "create")) {
 		if (argc < 4) {
 			fputs("Not enough parameters for create. Format: create <temp-dir> <team-id>\n", stderr);
-			return 1;
-		}
-
-		if (atoi(argv[3]) >= teamCount) {
-			printf("Team number is too big: %s >= %d\n", argv[3], teamCount);
 			return 1;
 		}
 
