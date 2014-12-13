@@ -12,7 +12,7 @@
 
 	$username = $session['username'];
 	if ($username === 'admin') {
-		echo 'QCTF_HERE_IS_YOR_FLAG';
+		echo 'QCTF_b62f8ba05a47c424daa9663ac506058f';
 	} else {
 		echo "Hello, <b>${username}</b>! Flag is available only for <b>admin</b>.";
 	}
