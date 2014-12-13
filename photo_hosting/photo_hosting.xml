@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quest series="photo_hosting" id="photo_hosting:100" proto="xmlquest-1.0">
+    <name>Фотохостинг</name>
+    <task type="html"><p>Всем звездам шоубизнеса понравился наш новый<a href="maze.qctf.ru">фотохостинг</a>!</p></task>
+    <checker strict="yes">
+        <solution case="insensitive">QCTF_4f328a927229ac3cb6dfd3e55e7cc437</solution>
+    </checker>
+</quest>
