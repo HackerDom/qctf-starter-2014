@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
+<quest series="Boss" id="Boss:100" proto="xmlquest-1.0">
+    <name>Начальник</name>
+    <task type="html"><p>Начальник агента Езрома — очень умный и хитрый человек. А сможете ли вы обыграть его в <a href="http://maze.qctf.ru/">викторине</a>?</p></task>
+=======
 <quest series="Maze" id="Maze:100" proto="xmlquest-1.0">
-    <name>Викторина</name>
-    <task type="html"><p>Начальник агента Езрома — очень умный и хитрый человек. А сможете ли вы обыграть его в <a href="maze.qctf.ru">викторине</a>?</p></task>
+    <name>Лабиринт</name>
+    <task type="html"><p>Начальник агента Езрома — очень умный и хитрый человек. А сможете ли вы выйти из <a href="maze.qctf.ru">лабиринта тысячи вопросов</a>, как вышел когда-то он?<br/>Флаг начинается с QCTF_</p></task>
+>>>>>>> 10ec6f93dc2ff663f91b2926585540fb7a30d1cd
     <checker strict="yes">
         <solution case="insensitive">QCTF_ea6d2f07efdbef86fba236b7fd91018b</solution>
     </checker>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quest series="Explorer" id="Explorer:100" proto="xmlquest-1.0">
+    <name>Explorer</name>
+<<<<<<< HEAD
+    <task type="html"><p>Агент Езром попытался передать в центр посылку с жёстким диском, и, слава Богу, что связной оказался нашим двойным агентом, однако, исследователям пока не удалось извлечь <a href="static/813F2ADB6B88B10CD07B4CFDC2A50CC8/Dora_the_Explorer.zip">оттуда</a> ценную информацию.</p></task>
+=======
+    <task type="html"><p>Агент Езром попытался передать в центр посылку с жёстким диском, и, слава Богу, что связной оказался нашим двойным агентом, однако, исследователям пока не удалось извлечь <a href="/static/813F2ADB6B88B10CD07B4CFDC2A50CC8/Dora_the_Explorer.zip">оттуда</a> ценную информацию.<br/>Флаг начинается с QCTF_</p></task>
+>>>>>>> 10ec6f93dc2ff663f91b2926585540fb7a30d1cd
+    <checker strict="yes">
+        <solution case="insensitive">QCTF_tNSzl8k2YGUpQ6mH</solution>
+    </checker>
+</quest>

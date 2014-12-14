@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<quest series="photo_hosting" id="photo_hosting:100" proto="xmlquest-1.0">
+<quest series="Photo" id="Photo:100" proto="xmlquest-1.0">
     <name>Фотохостинг</name>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <task type="html"><p>Всем звездам шоубизнеса понравился наш новый<a href="photo.qctf.ru">фотохостинг</a>!</p></task>
 =======
     <task type="html"><p>Всем звездам шоубизнеса понравился наш новый <a href="http://maze.qctf.ru/">фотохостинг</a>!</p></task>
 >>>>>>> origin/master
+=======
+    <task type="html"><p>Всем звездам шоубизнеса понравился наш новый <a href="http://photo.qctf.ru/">фотохостинг</a>!</p></task>
+=======
+    <task type="html"><p>Всем звездам шоубизнеса понравился наш новый <a href="http://maze.qctf.ru/">фотохостинг</a>!<br/>Флаг начинается с QCTF_</p></task>
+>>>>>>> 10ec6f93dc2ff663f91b2926585540fb7a30d1cd
+>>>>>>> eb05ab3e4d359a7004f10f15219cf4703f701338
     <checker strict="yes">
         <solution case="insensitive">QCTF_4f328a927229ac3cb6dfd3e55e7cc437</solution>
     </checker>
