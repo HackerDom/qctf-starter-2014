@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<quest series="Pizza" id="Pizza:100" proto="xmlquest-1.0">
+    <name>Викторина</name>
+    <task type="html"><p>Наши друзья открыли <a href="//pizza.qctf.ru">пиццерию</a>. Закажите себе парочку флагов.</p></task>
+    <checker strict="yes">
+        <solution case="insensitive">ГДЕ ФЛАГ???!!!!</solution>
+    </checker>
+</quest>
