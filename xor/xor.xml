@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <quest series="Xor" id="Xor:100" proto="xmlquest-1.0">
     <name>Xor</name>
-    <task type="html"><p>А этот <a href="/static/86c2ce2ed3f074989638e3e6652b88ee4ab263fd/xor.png">файл</a> мы просто поксорили с ключом длины 45.</p></task>
+    <task type="html"><p>А этот <a href="/static/86c2ce2ed3f074989638e3e6652b88ee4ab263fd/xor.png">файл</a> мы просто поксорили с ключом длины 45.<br/>Флаг начинается с QCTF_</p></task>
     <checker strict="yes">
         <solution case="insensitive">QCTF_0ab7e2790a8c43faa698860cc783a12eafcf0949dd0dcbb10282325f7dd630483961bf4ffc00808ddb818ef0bc594166236c51ea25803513474e57b1dd715a61</solution>
     </checker>
