@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <quest series="Passwords" id="Passwords:100" proto="xmlquest-1.0">
     <name>Пароли</name>
-    <task type="html"><p>Мы узнали, что владельцы домена esrom.spy использовали сторонний домен для вычисления хешей от их паролей. Нам удалось достать большую часть <a href="/static/3c814a16ffbc43bb753e1d9004bdd5262654ba24/hash.pl">исходного кода</a> этого сервиса, кроме значения одной переменной. Добудьте его</p> <p>К самому сервису можно подключится здесь: <b>nc hash.qctf.ru 60001</b><br/>Флаг начинается с QCTF_</p></task>
+    <task type="html"><p>Мы узнали, что владельцы домена esrom.spy использовали сторонний домен для вычисления хешей от их паролей. Нам удалось достать большую часть <a href="static/3c814a16ffbc43bb753e1d9004bdd5262654ba24/hash.pl">исходного кода</a> этого сервиса, кроме значения одной переменной. Добудьте его</p> <p>К самому сервису можно подключится здесь: <b>nc hash.qctf.ru 60001</b><br/>Флаг начинается с QCTF_</p></task>
     <checker strict="yes">
         <solution case="insensitive">QCTF_eaf0efb6cc3e53dc</solution>
     </checker>
