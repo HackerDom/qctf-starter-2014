@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <quest series="Photo" id="Photo:100" proto="xmlquest-1.0">
     <name>Фотохостинг</name>
-    <task type="html"><p>Всем звездам шоубизнеса понравился наш новый <a href="http://maze.qctf.ru/">фотохостинг</a>!</p></task>
+    <task type="html"><p>Всем звездам шоубизнеса понравился наш новый <a href="http://photo.qctf.ru/">фотохостинг</a>!</p></task>
     <checker strict="yes">
         <solution case="insensitive">QCTF_4f328a927229ac3cb6dfd3e55e7cc437</solution>
     </checker>
