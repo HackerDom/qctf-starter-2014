@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <quest series="Cookie" id="Cookie:100" proto="xmlquest-1.0">
     <name>Cookie</name>
-    <task type="html"><p>У нас <a href="http://maze.qctf.ru/">тут</a> какие-то странные ошибки... Сможете их исправить?</p></task>
+    <task type="html"><p>У нас <a href="http://cookie.qctf.ru/">тут</a> какие-то странные ошибки... Сможете их исправить?</p></task>
     <checker strict="yes">
         <solution case="insensitive">QCTF_b62f8ba05a47c424daa9663ac506058f</solution>
     </checker>
