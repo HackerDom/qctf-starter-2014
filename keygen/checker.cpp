@@ -5,7 +5,7 @@
 typedef unsigned long long ull;
 
 const char series[] = "Keygen";
-const char score[] = "200";
+const char score[] = "100";
 const char name[] = "Keygen";
 const char text[] = "Всё просто: вам нужно отослать строку, которую примет наш <a href='static/ec150796205b74e622e381c4fdb17fb4b701236b/checker'>чекер</a>";
 
