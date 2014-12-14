@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <quest series="Matryoshka" id="Matryoshka:100" proto="xmlquest-1.0">
     <name>Матрёшка</name>
+<<<<<<< HEAD
     <task type="html"><div><p>Напарник агента Езрома попытался выехать из страны, но был задержан.</p><p>При обыске у него была найдена матрёшка со спрятанной внутри флешкой. На флешке лежал один <a href='static/7edd3d936e825bab93760f25462cf13c/file.txt'>очень странный файл</a>. Какую информацию пытался вывезти шпион?</p></div></task>
+=======
+    <task type="html"><div><p>Напарник агента Езрома попытался выехать из страны, но был задержан.</p><p>При обыске у него была найдена матрёшка со спрятанной внутри флешкой. На флешке лежал один <a href='/static/7edd3d936e825bab93760f25462cf13c/file.txt'>очень странный файл</a>. Какую информацию пытался вывезти шпион?<br/>Флаг начинается с QCTF_</p></div></task>
+>>>>>>> 10ec6f93dc2ff663f91b2926585540fb7a30d1cd
     <checker strict="yes">
         <solution case="insensitive">qctf_f1a6337</solution>
     </checker>

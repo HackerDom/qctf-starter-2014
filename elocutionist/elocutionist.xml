@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <quest series="Elocutionist" id="Elocutionist:100" proto="xmlquest-1.0">
     <name>Чтец</name>
+<<<<<<< HEAD
     <task type="html"><p>Мы попросили одну девушку зачитать вам <a href="static/b0656810a61f7f25b24eebb2c7bc2185554988fb/flag.flac">флаг</a>. Осталось только услышать его.</p></task>
+=======
+    <task type="html"><p>Мы попросили одну девушку зачитать вам <a href="/static/b0656810a61f7f25b24eebb2c7bc2185554988fb/flag.flac">флаг</a>. Осталось только услышать его.<br/>Флаг начинается с QCTF_</p></task>
+>>>>>>> 10ec6f93dc2ff663f91b2926585540fb7a30d1cd
     <checker strict="yes">
         <solution case="insensitive">QCTF_c31834fa3524fa44</solution>
     </checker>

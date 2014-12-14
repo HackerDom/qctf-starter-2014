@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <quest series="Blackbox" id="Blackbox:100" proto="xmlquest-1.0">
     <name>Чёрный ящик</name>
+<<<<<<< HEAD
     <task type="html"><p>У нас завёлся сфинкс в чёрном ящике. Он отдаёт ключ только тем, кто сможет 10 раз подряд верно ответить на его вопросы.</p> <p>Если хотите попробовать, вам сюда: <b>nc blackbox.qctf.ru 60000</b> </p></task>
+=======
+    <task type="html"><p>У нас завёлся сфинкс в чёрном ящике. И ключ он отдаёт только тем, кто сможет 10 раз подряд верно ответить на его вопросы.</p> <p>Если хотите попробовать, вам сюда: <b>nc blackbox.qctf.ru 60000</b><br/>Флаг начинается с QCTF_</p></task>
+>>>>>>> 10ec6f93dc2ff663f91b2926585540fb7a30d1cd
     <checker strict="yes">
         <solution case="insensitive">QCTF_27a9d80b2585494095480647d3062ee3</solution>
     </checker>

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <quest series="Esrom" id="Esrom:100" proto="xmlquest-1.0">
     <name>Езром</name>
+<<<<<<< HEAD
     <task type="html"><p>Нам удалось перехватить <a href="static/60869e0e492b40172eaf2f0286159e47cf5353f7/esrom.pcap.gz">сигнал</a> от агента разведки под кодовым именем Езром. Узнайте, что он успел передать в штаб.</p></task>
+=======
+    <task type="html"><p>Нам удалось перехватить <a href="/static/60869e0e492b40172eaf2f0286159e47cf5353f7/esrom.pcap.gz">сигнал</a> от агента разведки под кодовым именем Езром. Узнайте, что он успел передать в штаб.<br/>Флаг начинается с QCTF_</p></task>
+>>>>>>> 10ec6f93dc2ff663f91b2926585540fb7a30d1cd
     <checker strict="yes">
         <solution case="insensitive">QCTF_8cf3424448fb7bf2</solution>
     </checker>
