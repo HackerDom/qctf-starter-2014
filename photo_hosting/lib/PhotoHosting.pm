@@ -25,6 +25,12 @@ sub startup {
 		return $mango->db($config->{db}->{name})->collection('users');
 	});
 
+	# Mongodb reports
+	$self->helper(reports => sub {
+		state $mango = Mango->new('mongodb://' . $config->{db}->{host} . ':' . $config->{db}->{port} );
+		return $mango->db($config->{db}->{name})->collection('reports');
+	});
+
 	# Routes
 	my $r = $self->routes;
 

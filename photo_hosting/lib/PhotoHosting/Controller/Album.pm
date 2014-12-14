@@ -140,16 +140,10 @@ sub report {
 	my $id = $self->stash('id');
 	# Поиск и изменение альбома
 	$self->render_later;
-	$self->users->find_and_modify(
+	$self->reports->insert(
 		{
-			query => {
-				'albums.id' => $id
-			},
-			update => {
-				'$set' => {
-					'albums.$.report' => 1
-				}
-			}
+			id => $id,
+			report => 1
 		},
 		sub {
 			my ($collection, $error, $user) = @_;
