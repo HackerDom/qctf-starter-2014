@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<quest series="photo_hosting" id="photo_hosting:100" proto="xmlquest-1.0">
+<quest series="Photo" id="Photo:100" proto="xmlquest-1.0">
     <name>Фотохостинг</name>
     <task type="html"><p>Всем звездам шоубизнеса понравился наш новый <a href="http://maze.qctf.ru/">фотохостинг</a>!</p></task>
     <checker strict="yes">
