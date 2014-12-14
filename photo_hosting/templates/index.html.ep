@@ -57,24 +57,24 @@
 			<div class="comment">
 				<div class="comment-avatar" style="background-image: url('/other/emma.jpg')"></div>
 				<div class="comment-text">
-					Прекрасный <a href="http://gosha.telenet.ru/13bb39253f9e079299f9993cb6df91c4">CLICK</a> фотохостинг! Теперь я могу в одном месте хранить все свои фотографии! С удовольствием поделюсь с вами одним из своих альбомов!
+					Прекрасный фотохостинг! Теперь я могу в одном месте хранить все свои фотографии! С удовольствием <a href="#">поделюсь</a> с вами одним из своих альбомов!
 					<div class="comment-author">Эмма Уотсон, известная актриса</div>
 				</div>
 			</div>
 			<!-- 2 -->
 			<div class="comment">
-				<div class="comment-avatar" style="background-image: url('/other/emma.jpg')"></div>
+				<div class="comment-avatar" style="background-image: url('/other/hloya.jpg')"></div>
 				<div class="comment-text">
-					Прекрасный фотохостинг! Теперь я могу в одном месте хранить все свои фотографии! С удовольствием поделюсь с вами одним из своих альбомов!
-					<div class="comment-author">Эмма Уотсон, известная актриса</div>
+					Это просто невероятно! Такой прекрасный дизайн и такая замечательная функциональность! <a href="#">Вот</a> несколько моих фотографий в качестве награды для разработчиков.
+					<div class="comment-author">Хлоя Морец, американская актриса и модель</div>
 				</div>
 			</div>
 			<!-- 3 -->
 			<div class="comment">
-				<div class="comment-avatar" style="background-image: url('/other/emma.jpg')"></div>
+				<div class="comment-avatar" style="background-image: url('/other/dakota.jpg')"></div>
 				<div class="comment-text">
-					Прекрасный фотохостинг! Теперь я могу в одном месте хранить все свои фотографии! С удовольствием поделюсь с вами одним из своих альбомов!
-					<div class="comment-author">Эмма Уотсон, известная актриса</div>
+					Вообще мне не очень понравилось... Но мне заплатили денег, чтобы я создала тут <a href="#">альбом</a> и залила несколько фотографий.
+					<div class="comment-author">Дакота Фэннинг</div>
 				</div>
 			</div>
 		</div>
